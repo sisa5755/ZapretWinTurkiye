@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- Only needed for the System.Windows.Forms.NotifyIcon tray icon -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <!--
+      IMPORTANT: keep this disabled. With UseWPF + UseWindowsForms both true,
+      enabling implicit usings makes the SDK auto-add global usings for BOTH
+      System.Windows and System.Windows.Forms, and both namespaces contain an
+      "Application" and a "Control" type - every reference to either becomes
+      an unresolvable CS0104 ambiguity. Every file in this project already
+      declares the exact usings it needs (Control/Application from
+      System.Windows[.Controls], WinForms.* via the aliased
+      "using WinForms = System.Windows.Forms;"), so nothing else changes.
+    -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>ZapretGuiWpf</AssemblyName>
+    <RootNamespace>ZapretGuiWpf</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+</Project>

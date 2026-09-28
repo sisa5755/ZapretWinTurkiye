@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <assemblyIdentity version="1.0.0.0" name="ZapretGuiWpf.app"/>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          winws.exe / WinDivert / "sc" service install / DNS changes all need
+          admin rights, exactly like the Python version's is_admin() +
+          ShellExecuteW("runas", ...) relaunch. Requesting elevation directly
+          in the manifest means Windows shows the UAC prompt before the app
+          even starts, so we don't need to hand-roll the relaunch logic.
+        -->
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/> <!-- Windows 10/11 -->
+    </application>
+  </compatibility>
+</assembly>
