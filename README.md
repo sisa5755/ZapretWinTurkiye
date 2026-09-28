@@ -18,7 +18,8 @@ Bu program, Türk kullanıcılar için DPI (Deep Packet Inspection / Derin Paket
 
 ## Ekran Görüntüsü
 
-<img width="530" height="825" alt="Image" src="https://github.com/user-attachments/assets/05cad5e6-2775-4f8a-92b1-7aa5be147b4b" />
+<img width="530" height="825" alt="Screenshot 2026-09-27 202052" src="https://github.com/user-attachments/assets/efd7bf0a-e46b-4c6b-9221-e6461342b9fc" />
+
 
 
 ## Gereksinimler
